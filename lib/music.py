@@ -47,9 +47,13 @@ def load_song(artist_id):
         song_list.append(song)
     return song_list
 
-def random_song(song_list):
-    song = random.choice(song_list) 
-    return song 
+#Getting random song
+def random_song(genre_id):
+    mylist = load_artist(genre_id)
+    myartist = random_artist(mylist)
+    mysonglist = load_song(myartist)
+    mysong = random.choice(mysonglist) 
+    return mysong 
 
 
 
